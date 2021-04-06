@@ -1,1 +1,2 @@
+include ':yakan'
 rootProject.name = "yakan"
