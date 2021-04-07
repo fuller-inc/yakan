@@ -22,4 +22,24 @@ class IntExtensionsTest {
 
         assert(actual == expected)
     }
+
+    @Test
+    fun testPred_returnsDecrementedValue() {
+        val target = 42
+
+        val actual = target.pred()
+        val expected = 41
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testPred_overflowsIfIntMinValue() {
+        val target = Int.MIN_VALUE
+
+        val actual = target.pred()
+        val expected = Int.MAX_VALUE
+
+        assert(actual == expected)
+    }
 }
