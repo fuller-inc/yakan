@@ -46,6 +46,10 @@ def repo = new File(rootDir, "repository")
 
 apply plugin: 'maven'
 
+kotlin.sourceSets.all {
+    languageSettings.useExperimentalAnnotation("kotlin.RequiresOptIn")
+}
+
 uploadArchives {
     repositories {
         mavenDeployer {
