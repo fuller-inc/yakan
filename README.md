@@ -47,3 +47,17 @@ boolean.isTrue()
 ```kotlin
 boolean.isFalse()
 ```
+
+### Int
+`succ()` returns successor.
+```kotlin
+int.succ()
+```
+`safeSucc()` returns successor or throw exception if the value is Int.MAX_VALUE.
+```kotlin
+int.safeSucc()
+```
+`pred()` and `safePred()` is the predecessor version of `succ()` and `safeSucc()`.
+
+### Long
+`succ()`, `safeSucc()`, `pred()`, and `safePred()` offers same function of that of Int.
