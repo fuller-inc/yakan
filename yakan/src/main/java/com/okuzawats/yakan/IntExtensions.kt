@@ -32,3 +32,18 @@ fun Int.safeSucc(): Int {
  * @see [succ]
  */
 fun Int.pred(): Int = (this - 1)
+
+/**
+ * returns predecessor of Int value, or throws exception if it is Int.MIN_VALUE
+ *
+ * if the value is Int.MIN_VALUE, throws [IllegalStateException]
+ * @return predecessor of Int value
+ * @throws [IllegalStateException]
+ * @see [pred] [safeSucc]
+ */
+fun Int.safePred(): Int {
+    if (this == Int.MIN_VALUE) {
+        throw IllegalStateException("can not create a successor because it is upper bounds.")
+    }
+    return pred()
+}
