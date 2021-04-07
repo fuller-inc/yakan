@@ -1,2 +1,6 @@
+include ':core'
+include ':app'
 include ':yakan'
+project(':app').projectDir = new File(rootDir, 'app_/')
+project(':core').projectDir = new File(rootDir, 'core_/')
 rootProject.name = "yakan"
