@@ -1,5 +1,8 @@
 package com.okuzawats.yakan
 
+import kotlin.contracts.ExperimentalContracts
+import kotlin.contracts.contract
+
 /**
  * Unwrap nullable type to non-null.
  *
@@ -11,3 +14,11 @@ package com.okuzawats.yakan
  * @return non-null value of [T]
  */
 fun <T : Any?> T?.unwrap(): T = requireNotNull(this)
+
+@OptIn(ExperimentalContracts::class)
+fun <T : Any?> T?.isNull(): Boolean {
+    contract {
+        returns() implies (this@isNull != null)
+    }
+    return (this == null)
+}
