@@ -16,7 +16,7 @@ allprojects {
 then include `implementation` to your `app/build.gradle` or something.
 ```
 dependencies {
-  implementation "com.okuzawats:yakan:1.0.3"
+  implementation "com.okuzawats:yakan:1.0.4"
 }
 ```
 
