@@ -1,10 +1,13 @@
 package com.okuzawats.yakan
 
 /**
- * Unwrap nullable [Any] to non-null.
+ * Unwrap nullable type to non-null.
  *
  * Calls [requireNotNull] internally, but used as extension function.
  * For example, string.unwrap() returns non-null value if it is non-null.
  * Or throw [IllegalArgumentException] if it is null.
+ *
+ * @param T the type of nullable value
+ * @return non-null value of [T]
  */
-fun Any?.unwrap() = requireNotNull(this)
+fun <T : Any?> T?.unwrap(): T = requireNotNull(this)
