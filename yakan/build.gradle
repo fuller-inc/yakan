@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 8
-        versionName "1.0.7"
+        versionCode 9
+        versionName "1.0.8"
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -47,7 +47,7 @@ uploadArchives {
     repositories {
         mavenDeployer {
             repository url: "file://${repo.absolutePath}"
-            pom.version = '1.0.7'
+            pom.version = '1.0.8'
             pom.groupId = 'com.okuzawats'
             pom.artifactId = 'yakan'
         }
