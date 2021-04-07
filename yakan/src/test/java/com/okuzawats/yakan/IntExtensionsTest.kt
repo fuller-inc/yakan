@@ -59,4 +59,21 @@ class IntExtensionsTest {
 
         assert(actual == expected)
     }
+
+    @Test
+    fun testSafePred_returnsPredecessor() {
+        val target = 42
+
+        val actual = target.safePred()
+        val expected = 41
+
+        assert(actual == expected)
+    }
+
+    @Test(expected = IllegalStateException::class)
+    fun testSafePred_throwExceptionIfIntMinValue() {
+        val target = Int.MIN_VALUE
+
+        val actual = target.safePred()
+    }
 }
