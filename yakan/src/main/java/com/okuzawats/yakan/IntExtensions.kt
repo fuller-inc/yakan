@@ -5,9 +5,24 @@ package com.okuzawats.yakan
  *
  * if the value is Int.MAX_VALUE, returns Int.MIN_VALUE
  * @return successor of Int value
- * @see [pred]
+ * @see [safeSucc] [pred]
  */
 fun Int.succ(): Int = (this + 1)
+
+/**
+ * returns successor of Int value, or throws exception if it is Int.MAX_VALUE
+ *
+ * if the value is Int.MAX_VALUE, throws [IllegalStateException]
+ * @return successor of Int value
+ * @throws [IllegalStateException]
+ * @see [succ] [pred]
+ */
+fun Int.safeSucc(): Int {
+    if (this == Int.MAX_VALUE) {
+        throw IllegalStateException("can not create a successor because it is upper bounds.")
+    }
+    return succ()
+}
 
 /**
  * returns predecessor of Int value
