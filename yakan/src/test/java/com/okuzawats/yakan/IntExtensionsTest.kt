@@ -14,7 +14,7 @@ class IntExtensionsTest {
     }
 
     @Test
-    fun testSucc_overflowsIfIntMaxValue() {
+    fun testSucc_overflowsIfMaxValue() {
         val target = Int.MAX_VALUE
 
         val actual = target.succ()
@@ -34,14 +34,14 @@ class IntExtensionsTest {
     }
 
     @Test(expected = IllegalStateException::class)
-    fun testSafeSucc_throwExceptionIfIntMaxValue() {
+    fun testSafeSucc_throwExceptionIfMaxValue() {
         val target = Int.MAX_VALUE
 
         val actual = target.safeSucc()
     }
 
     @Test
-    fun testPred_returnsPredecessorValue() {
+    fun testPred_returnsPredecessor() {
         val target = 42
 
         val actual = target.pred()
@@ -51,7 +51,7 @@ class IntExtensionsTest {
     }
 
     @Test
-    fun testPred_overflowsIfIntMinValue() {
+    fun testPred_overflowsIfMinValue() {
         val target = Int.MIN_VALUE
 
         val actual = target.pred()
@@ -71,7 +71,7 @@ class IntExtensionsTest {
     }
 
     @Test(expected = IllegalStateException::class)
-    fun testSafePred_throwExceptionIfIntMinValue() {
+    fun testSafePred_throwExceptionIfMinValue() {
         val target = Int.MIN_VALUE
 
         val actual = target.safePred()
