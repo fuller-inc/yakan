@@ -23,6 +23,27 @@ dependencies {
 ## how to use
 ### Any
 `unwrap()` unwraps nullable value.
-```
+```kotlin
 any.unwrap()
+```
+
+`isNull()` returns true if null.
+```kotlin
+any.isNull()
+```
+
+`isNotNull()` returns true if not null.
+```kotlin
+any.isNotNull()
+```
+
+### Boolean
+`isTrue()` returns true if not null and true.
+```kotlin
+boolean.isTrue()
+```
+
+`isFalse()` returns true if not null and false.
+```kotlin
+boolean.isFalse()
 ```
