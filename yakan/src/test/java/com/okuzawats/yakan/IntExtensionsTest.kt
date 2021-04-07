@@ -4,7 +4,7 @@ import org.junit.Test
 
 class IntExtensionsTest {
     @Test
-    fun testSucc_returnsIncrementedValue() {
+    fun testSucc_returnsSuccessor() {
         val target = 42
 
         val actual = target.succ()
@@ -24,7 +24,7 @@ class IntExtensionsTest {
     }
 
     @Test
-    fun testPred_returnsDecrementedValue() {
+    fun testPred_returnsPredecessorValue() {
         val target = 42
 
         val actual = target.pred()
