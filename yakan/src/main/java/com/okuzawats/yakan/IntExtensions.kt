@@ -1,9 +1,9 @@
 package com.okuzawats.yakan
 
 /**
- * returns incremented (+1) value
+ * returns successor of Int value
  *
  * if the value is Int.MAX_VALUE, returns Int.MIN_VALUE
- * @return incremented value
+ * @return successor of Int value
  */
 fun Int.succ(): Int = (this + 1)
