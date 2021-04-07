@@ -24,6 +24,23 @@ class IntExtensionsTest {
     }
 
     @Test
+    fun testSafeSucc_returnsSuccessor() {
+        val target = 42
+
+        val actual = target.safeSucc()
+        val expected = 43
+
+        assert(actual == expected)
+    }
+
+    @Test(expected = IllegalStateException::class)
+    fun testSafeSucc_throwExceptionIfIntMaxValue() {
+        val target = Int.MAX_VALUE
+
+        val actual = target.safeSucc()
+    }
+
+    @Test
     fun testPred_returnsPredecessorValue() {
         val target = 42
 
