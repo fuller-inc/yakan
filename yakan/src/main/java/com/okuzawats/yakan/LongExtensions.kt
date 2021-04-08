@@ -65,3 +65,19 @@ fun Long.safePred(): Long {
  * @return true if has predecessor, else false
  */
 fun Long.hasPred(): Boolean = (this != Long.MIN_VALUE)
+
+/**
+ * return true if even number (0, 2, 4, ...), else false
+ *
+ * @return true if even, false if odd
+ */
+val Long.isEven: Boolean
+    get() = (this % 2L == 0L)
+
+/**
+ * return true if odd number (1, 3, 5, ...), else false
+ *
+ * @return true if odd, false if even
+ */
+val Long.isOdd: Boolean
+    get() = (this % 2L == 1L)
