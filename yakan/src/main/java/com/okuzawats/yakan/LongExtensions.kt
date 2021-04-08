@@ -57,7 +57,6 @@ fun Long.safePred(): Long {
     return pred()
 }
 
-
 /**
  * return true if has predecessor, else false
  *
