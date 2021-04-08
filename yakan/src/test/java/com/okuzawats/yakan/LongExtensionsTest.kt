@@ -116,4 +116,44 @@ class LongExtensionsTest {
 
         assert(actual == expected)
     }
+
+    @Test
+    fun testIsEven_returnsTrueIsEven() {
+        val target = 0L
+
+        val actual = target.isEven
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testIsEven_returnsFalseIsOdd() {
+        val target = 1L
+
+        val actual = target.isEven
+        val expected = false
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testIsOdd_returnsTrueIsOdd() {
+        val target = 1L
+
+        val actual = target.isOdd
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testIsOdd_returnsFalseIsEven() {
+        val target = 0L
+
+        val actual = target.isOdd
+        val expected = false
+
+        assert(actual == expected)
+    }
 }
