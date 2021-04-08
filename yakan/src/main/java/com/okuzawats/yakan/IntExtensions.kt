@@ -65,3 +65,19 @@ fun Int.safePred(): Int {
  * @return
  */
 fun Int.hasPred(): Boolean = (this != Int.MIN_VALUE)
+
+/**
+ * return true if even number (0, 2, 4, ...), else false
+ *
+ * @return true if even, false if odd
+ */
+val Int.isEven: Boolean
+    get() = (this % 2 == 0)
+
+/**
+ * return true if odd number (1, 3, 5, ...), else false
+ *
+ * @return true if odd, false if even
+ */
+val Int.isOdd: Boolean
+    get() = (this % 2 == 1)
