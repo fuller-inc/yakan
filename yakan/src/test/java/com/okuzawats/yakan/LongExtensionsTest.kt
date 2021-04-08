@@ -97,7 +97,6 @@ class LongExtensionsTest {
         val actual = target.safePred()
     }
 
-
     @Test
     fun testHasPred_returnsTrueIfNotMinValue() {
         val target = 42L
