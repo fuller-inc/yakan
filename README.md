@@ -57,7 +57,12 @@ int.succ()
 ```kotlin
 int.safeSucc()
 ```
-`pred()` and `safePred()` is the predecessor version of `succ()` and `safeSucc()`.
+`pred()` and `safePred()` is the predecessor version of `succ()` and `safeSucc()`. Also, you can use `hasSucc()` and `hasPred()` to check if successor or predecessor exists.
+`isEven` and `isOdd` returns a boolean that represents the number is even or odd.
+```kotlin
+int.isEven
+int.isOdd
+```
 
 ### Long
-`succ()`, `safeSucc()`, `pred()`, and `safePred()` offers same function of that of Int.
+same as `Int`.

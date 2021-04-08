@@ -25,6 +25,15 @@ fun Long.safeSucc(): Long {
 }
 
 /**
+ * return true if has successor, else false
+ *
+ * if the value is Long.MAX_VALUE, it does not have a successor, so returns false.
+ * else returns true.
+ * @return true if has successor, else false
+ */
+fun Long.hasSucc(): Boolean = (this != Long.MAX_VALUE)
+
+/**
  * returns predecessor of Long value
  *
  * if the value is Long.MIN_VALUE, returns Long.MAX_VALUE
@@ -47,3 +56,28 @@ fun Long.safePred(): Long {
     }
     return pred()
 }
+
+/**
+ * return true if has predecessor, else false
+ *
+ * if the value is Long.MIN_VALUE, it does not have a predecessor, so returns false.
+ * else returns true.
+ * @return true if has predecessor, else false
+ */
+fun Long.hasPred(): Boolean = (this != Long.MIN_VALUE)
+
+/**
+ * return true if even number (0, 2, 4, ...), else false
+ *
+ * @return true if even, false if odd
+ */
+val Long.isEven: Boolean
+    get() = (this % 2L == 0L)
+
+/**
+ * return true if odd number (1, 3, 5, ...), else false
+ *
+ * @return true if odd, false if even
+ */
+val Long.isOdd: Boolean
+    get() = (this % 2L == 1L)

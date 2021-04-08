@@ -25,6 +25,15 @@ fun Int.safeSucc(): Int {
 }
 
 /**
+ * return true if has successor, else false
+ *
+ * if the value is Int.MAX_VALUE, it does not have a successor, so returns false.
+ * else returns true.
+ * @return true if has successor, else false
+ */
+fun Int.hasSucc(): Boolean = (this != Int.MAX_VALUE)
+
+/**
  * returns predecessor of Int value
  *
  * if the value is Int.MIN_VALUE, returns Int.MAX_VALUE
@@ -47,3 +56,28 @@ fun Int.safePred(): Int {
     }
     return pred()
 }
+
+/**
+ * return true if has predecessor, else false
+ *
+ * if the value is Int.MIN_VALUE, it does not have a predecessor, so returns false.
+ * else returns true.
+ * @return true if has predecessor, else false
+ */
+fun Int.hasPred(): Boolean = (this != Int.MIN_VALUE)
+
+/**
+ * return true if even number (0, 2, 4, ...), else false
+ *
+ * @return true if even, false if odd
+ */
+val Int.isEven: Boolean
+    get() = (this % 2 == 0)
+
+/**
+ * return true if odd number (1, 3, 5, ...), else false
+ *
+ * @return true if odd, false if even
+ */
+val Int.isOdd: Boolean
+    get() = (this % 2 == 1)

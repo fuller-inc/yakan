@@ -41,6 +41,26 @@ class LongExtensionsTest {
     }
 
     @Test
+    fun testHasSucc_returnsTrueIfNotMaxValue() {
+        val target = 42L
+
+        val actual = target.hasSucc()
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testHasSucc_returnsFalseIfMaxValue() {
+        val target = Long.MAX_VALUE
+
+        val actual = target.hasSucc()
+        val expected = false
+
+        assert(actual == expected)
+    }
+
+    @Test
     fun testPred_returnsPredecessor() {
         val target = 42L
 
@@ -75,4 +95,65 @@ class LongExtensionsTest {
         val target = Long.MIN_VALUE
 
         val actual = target.safePred()
-    }}
+    }
+
+    @Test
+    fun testHasPred_returnsTrueIfNotMinValue() {
+        val target = 42L
+
+        val actual = target.hasPred()
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testHasPred_returnsFalseIfMinValue() {
+        val target = Long.MIN_VALUE
+
+        val actual = target.hasPred()
+        val expected = false
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testIsEven_returnsTrueIsEven() {
+        val target = 0L
+
+        val actual = target.isEven
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testIsEven_returnsFalseIsOdd() {
+        val target = 1L
+
+        val actual = target.isEven
+        val expected = false
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testIsOdd_returnsTrueIsOdd() {
+        val target = 1L
+
+        val actual = target.isOdd
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testIsOdd_returnsFalseIsEven() {
+        val target = 0L
+
+        val actual = target.isOdd
+        val expected = false
+
+        assert(actual == expected)
+    }
+}
