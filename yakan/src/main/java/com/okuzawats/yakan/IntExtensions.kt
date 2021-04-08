@@ -29,7 +29,7 @@ fun Int.safeSucc(): Int {
  *
  * if the value is Int.MAX_VALUE, it does not have a successor, so returns false.
  * else returns true.
- * @return
+ * @return true if has successor, else false
  */
 fun Int.hasSucc(): Boolean = (this != Int.MAX_VALUE)
 
@@ -62,7 +62,7 @@ fun Int.safePred(): Int {
  *
  * if the value is Int.MIN_VALUE, it does not have a predecessor, so returns false.
  * else returns true.
- * @return
+ * @return true if has predecessor, else false
  */
 fun Int.hasPred(): Boolean = (this != Int.MIN_VALUE)
 
