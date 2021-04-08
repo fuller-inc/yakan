@@ -41,6 +41,26 @@ class IntExtensionsTest {
     }
 
     @Test
+    fun testHasSucc_returnsTrueIfNotMaxValue() {
+        val target = 42
+
+        val actual = target.hasSucc()
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testHasSucc_returnsFalseIfMaxValue() {
+        val target = Int.MAX_VALUE
+
+        val actual = target.hasSucc()
+        val expected = false
+
+        assert(actual == expected)
+    }
+
+    @Test
     fun testPred_returnsPredecessor() {
         val target = 42
 
@@ -75,5 +95,25 @@ class IntExtensionsTest {
         val target = Int.MIN_VALUE
 
         val actual = target.safePred()
+    }
+
+    @Test
+    fun testHasPred_returnsTrueIfNotMinValue() {
+        val target = 42
+
+        val actual = target.hasPred()
+        val expected = true
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testHasPred_returnsFalseIfMinValue() {
+        val target = Int.MIN_VALUE
+
+        val actual = target.hasPred()
+        val expected = false
+
+        assert(actual == expected)
     }
 }
