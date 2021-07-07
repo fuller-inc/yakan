@@ -16,7 +16,7 @@ allprojects {
 then include `implementation` to your `app/build.gradle` or something.
 ```
 dependencies {
-  implementation "jp.co.fuller:yakan:1.0.9"
+  implementation "jp.co.fuller:yakan:x.y.x"
 }
 ```
 
