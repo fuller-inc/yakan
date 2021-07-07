@@ -48,7 +48,7 @@ uploadArchives {
         mavenDeployer {
             repository url: "file://${repo.absolutePath}"
             pom.version = '1.0.9'
-            pom.groupId = 'com.okuzawats'
+            pom.groupId = 'jp.co.fuller'
             pom.artifactId = 'yakan'
         }
     }
