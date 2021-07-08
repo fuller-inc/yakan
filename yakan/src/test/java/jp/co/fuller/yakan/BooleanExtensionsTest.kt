@@ -1,4 +1,4 @@
-package com.okuzawats.yakan
+package jp.co.fuller.yakan
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.okuzawats.yakan
+package jp.co.fuller.yakan
 
 /**
  * returns successor of Int value
