@@ -7,7 +7,7 @@ include maven to your project `build.gradle`.
 allprojects {
   repositories {
     maven {
-      url 'http://okuzawats.github.io/yakan/repository'
+      url 'http://fuller-inc.github.io/yakan/repository'
     }
   }
 }
@@ -16,7 +16,7 @@ allprojects {
 then include `implementation` to your `app/build.gradle` or something.
 ```
 dependencies {
-  implementation "com.okuzawats:yakan:1.0.8"
+  implementation "jp.co.fuller:yakan:x.y.x"
 }
 ```
 

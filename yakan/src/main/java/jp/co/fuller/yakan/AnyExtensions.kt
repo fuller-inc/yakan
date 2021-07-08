@@ -1,4 +1,4 @@
-package com.okuzawats.yakan
+package jp.co.fuller.yakan
 
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract

@@ -1,4 +1,4 @@
-package com.okuzawats.yakan
+package jp.co.fuller.yakan
 
 /**
  * returns true if is not null and is true
