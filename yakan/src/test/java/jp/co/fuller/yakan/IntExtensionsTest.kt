@@ -1,6 +1,7 @@
 package jp.co.fuller.yakan
 
 import org.junit.Test
+import java.util.Locale
 
 class IntExtensionsTest {
     @Test
@@ -153,6 +154,36 @@ class IntExtensionsTest {
 
         val actual = target.isOdd
         val expected = false
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testToStringWithSeparator_returnsWithDefaultDelimiters() {
+        val target = 123456
+
+        val actual = target.toSeparatedString()
+        val expected = "123,456"
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testToStringWithSeparator_returnsWithJpDelimiters() {
+        val target = 123456
+
+        val actual = target.toSeparatedString(Locale.JAPAN)
+        val expected = "123,456"
+
+        assert(actual == expected)
+    }
+
+    @Test
+    fun testToStringWithSeparator_returnsWithGermanDelimiters() {
+        val target = 123456
+
+        val actual = target.toSeparatedString(Locale.GERMAN)
+        val expected = "123.456"
 
         assert(actual == expected)
     }
