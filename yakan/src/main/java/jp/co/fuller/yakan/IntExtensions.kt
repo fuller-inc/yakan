@@ -1,5 +1,8 @@
 package jp.co.fuller.yakan
 
+import java.text.NumberFormat
+import java.util.Locale
+
 /**
  * returns successor of Int value
  *
@@ -81,3 +84,13 @@ val Int.isEven: Boolean
  */
 val Int.isOdd: Boolean
     get() = (this % 2 == 1)
+
+/**
+ * return to string with specified country's separators.
+ * if the value is 123456, and locale is jp, returns to "123,456"
+
+ * @param locale target country locale
+ * @return string with separators
+ */
+fun Int.toStringWithSeparator(locale: Locale = Locale.US): String =
+    NumberFormat.getNumberInstance(locale).format(this)
