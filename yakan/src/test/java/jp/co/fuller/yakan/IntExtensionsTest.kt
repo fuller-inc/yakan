@@ -159,6 +159,16 @@ class IntExtensionsTest {
     }
 
     @Test
+    fun testToStringWithSeparator_returnsWithDefaultDelimiters() {
+        val target = 123456
+
+        val actual = target.toSeparatedString()
+        val expected = "123,456"
+
+        assert(actual == expected)
+    }
+
+    @Test
     fun testToStringWithSeparator_returnsWithJpDelimiters() {
         val target = 123456
 
