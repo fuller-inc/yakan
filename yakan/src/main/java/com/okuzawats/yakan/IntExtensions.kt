@@ -92,5 +92,5 @@ val Int.isOdd: Boolean
  * @param locale target country locale
  * @return string with separators
  */
-fun Int.toStringWithSeparator(locale: Locale): String =
+fun Int.toStringWithSeparator(locale: Locale = Locale.US): String =
     NumberFormat.getNumberInstance(locale).format(this)
