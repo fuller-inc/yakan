@@ -159,7 +159,7 @@ class IntExtensionsTest {
     }
 
     @Test
-    fun testToSeparatedString_returnsWithJpDelimiters() {
+    fun testToStringWithSeparator_returnsWithJpDelimiters() {
         val target = 123456
 
         val actual = target.toSeparatedString(Locale.JAPAN)
@@ -169,7 +169,7 @@ class IntExtensionsTest {
     }
 
     @Test
-    fun testToSeparatedString_returnsWithGermanDelimiters() {
+    fun testToStringWithSeparator_returnsWithGermanDelimiters() {
         val target = 123456
 
         val actual = target.toSeparatedString(Locale.GERMAN)
