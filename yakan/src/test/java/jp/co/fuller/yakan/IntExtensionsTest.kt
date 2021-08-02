@@ -178,4 +178,3 @@ class IntExtensionsTest {
         assert(actual == expected)
     }
 }
-

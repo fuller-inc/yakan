@@ -94,4 +94,3 @@ val Int.isOdd: Boolean
  */
 fun Int.toStringWithSeparator(locale: Locale = Locale.US): String =
     NumberFormat.getNumberInstance(locale).format(this)
-
