@@ -1,4 +1,4 @@
-package jp.co.fuller.yakan
+package jp.co.fuller.yakan.view
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
