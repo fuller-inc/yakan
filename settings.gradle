@@ -1,3 +1,4 @@
+include ':view'
 include ':app'
 include ':yakan'
 project(':app').projectDir = new File(rootDir, 'app/')
