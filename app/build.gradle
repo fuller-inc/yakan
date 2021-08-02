@@ -7,7 +7,7 @@ android {
   compileSdkVersion 30
 
   defaultConfig {
-    applicationId "com.okuzawats.yakan"
+    applicationId "jp.co.fuller.yakan"
     minSdkVersion 26
     targetSdkVersion 30
     versionCode 1
