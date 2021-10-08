@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'org.jlleitschuh.gradle.ktlint'
 }
 
 android {
@@ -32,31 +31,10 @@ android {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.31"
     testImplementation 'junit:junit:4.13.2'
 }
 
-ktlint {
-    reporters {
-        reporter "CHECKSTYLE"
-    }
-}
-
-def repo = new File(rootDir, "repository")
-
-apply plugin: 'maven'
-
 kotlin.sourceSets.all {
     languageSettings.useExperimentalAnnotation("kotlin.RequiresOptIn")
-}
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository url: "file://${repo.absolutePath}"
-            pom.version = '1.1.1'
-            pom.groupId = 'jp.co.fuller'
-            pom.artifactId = 'yakan'
-        }
-    }
 }
