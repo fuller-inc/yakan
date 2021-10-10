@@ -2,6 +2,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         // workaround for version catalogue
@@ -10,5 +11,10 @@ buildscript {
 
         classpath(libs.android.gradle)
         classpath(libs.kotlin.gradle)
+        classpath(libs.ktlint.gradle)
     }
+}
+
+subprojects {
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
 }
