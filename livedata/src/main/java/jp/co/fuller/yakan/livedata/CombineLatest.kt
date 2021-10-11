@@ -55,7 +55,6 @@ inline fun <T : Any, LIVE1 : Any, LIVE2 : Any, LIVE3 : Any> combineLatest(
     }.distinctUntilChanged()
 }
 
-
 /**
  * combine four [LiveData] and returns new value.
  * @param liveData1 LiveData one
