@@ -36,7 +36,7 @@ fun <T : Any> merge(vararg liveData: LiveData<T>): LiveData<T> {
 }
 
 /**
- * An extension function that converts [LiveData] the type parameter [T] to [R]
+ * An extension function that converts [LiveData] the type parameter [T] to [R].
  */
 fun <T, R> LiveData<T>.map(transform: (T) -> R): LiveData<R> {
     return object : MediatorLiveData<R>() {
