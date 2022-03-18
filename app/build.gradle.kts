@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk = 30
+    compileSdk = 32
 
     defaultConfig {
         applicationId = "jp.co.fuller.yakan"
         minSdk = 21
-        targetSdk = 30
+        targetSdk = 32
         versionCode = 1
         versionName = "1.0"
 
