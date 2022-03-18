@@ -1,6 +1,7 @@
 plugins {
     id("com.android.library")
     kotlin("android")
+    `maven-publish`
 }
 
 android {
@@ -31,4 +32,27 @@ kotlin.sourceSets.all {
 
 dependencies {
     testImplementation(libs.junit.junit)
+}
+
+tasks {
+    val androidSourcesJar by creating(Jar::class) {
+        archiveClassifier.set("sources")
+        from(android.sourceSets["main"].java.srcDirs)
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            repositories.maven {
+                url = uri("$rootDir/repository")
+            }
+            create<MavenPublication>("maven") {
+                artifact(tasks["androidSourcesJar"])
+                version = "1.2.0"
+                groupId = "jp.co.fuller"
+                artifactId = "yakan"
+            }
+        }
+    }
 }
