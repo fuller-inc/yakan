@@ -5,5 +5,5 @@
   <groupId>jp.co.fuller</groupId>
   <artifactId>yakan.livedata</artifactId>
   <version>1.2.0</version>
-  <packaging>pom</packaging>
+  <packaging>aar</packaging>
 </project>
