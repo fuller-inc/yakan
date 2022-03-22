@@ -1,6 +1,13 @@
-include ':app'
-include ':yakan'
-include ':view'
-include ':livedata'
-project(':app').projectDir = new File(rootDir, 'app/')
+enableFeaturePreview("VERSION_CATALOGS")
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 rootProject.name = "yakan"
+include(":app")
+include(":yakan")
+include(":livedata")
+include(":view")

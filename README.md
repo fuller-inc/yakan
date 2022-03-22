@@ -7,7 +7,7 @@ include maven to your project `build.gradle`.
 allprojects {
   repositories {
     maven {
-      url 'http://fuller-inc.github.io/yakan/repository'
+      url 'https://fuller-inc.github.io/yakan/repository'
     }
   }
 }
@@ -62,6 +62,12 @@ int.safeSucc()
 ```kotlin
 int.isEven
 int.isOdd
+```
+`toStringWithSeparator()` returns to string with specified country's separators.
+if the value is 123456, and locale is jp, returns to "123,456".
+default locale is `Locale.US`
+```kotlin
+int.toStringWithSeparator(locale = Locale.JAPAN)
 ```
 
 ### Long
