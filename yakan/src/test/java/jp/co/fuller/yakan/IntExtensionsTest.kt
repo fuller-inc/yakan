@@ -162,7 +162,7 @@ class IntExtensionsTest {
     fun testToStringWithSeparator_returnsWithDefaultDelimiters() {
         val target = 123456
 
-        val actual = target.toSeparatedString()
+        val actual = target.toStringWithSeparator()
         val expected = "123,456"
 
         assert(actual == expected)
@@ -172,7 +172,7 @@ class IntExtensionsTest {
     fun testToStringWithSeparator_returnsWithJpDelimiters() {
         val target = 123456
 
-        val actual = target.toSeparatedString(Locale.JAPAN)
+        val actual = target.toStringWithSeparator(Locale.JAPAN)
         val expected = "123,456"
 
         assert(actual == expected)
@@ -182,7 +182,7 @@ class IntExtensionsTest {
     fun testToStringWithSeparator_returnsWithGermanDelimiters() {
         val target = 123456
 
-        val actual = target.toSeparatedString(Locale.GERMAN)
+        val actual = target.toStringWithSeparator(Locale.GERMAN)
         val expected = "123.456"
 
         assert(actual == expected)
