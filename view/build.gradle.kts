@@ -37,13 +37,6 @@ dependencies {
     testImplementation(libs.junit.junit)
 }
 
-tasks {
-    val androidSourcesJar by creating(Jar::class) {
-        archiveClassifier.set("sources")
-        from(android.sourceSets["main"].java.srcDirs)
-    }
-}
-
 afterEvaluate {
     publishing {
         publications {
@@ -51,7 +44,7 @@ afterEvaluate {
                 url = uri("$rootDir/repository")
             }
             create<MavenPublication>("maven") {
-                artifact(tasks["androidSourcesJar"])
+                artifact(file("${project.buildDir}/outputs/aar/view-release.aar"))
                 version = "1.2.0"
                 groupId = "jp.co.fuller"
                 artifactId = "yakan.view"
