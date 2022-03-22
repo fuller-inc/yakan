@@ -35,6 +35,8 @@ kotlin.sourceSets.all {
 dependencies {
     implementation(libs.androidx.lifecycle.livedata)
     testImplementation(libs.junit.junit)
+    testImplementation(libs.androidx.test.junit)
+    testImplementation(libs.robolectric)
 }
 
 afterEvaluate {
