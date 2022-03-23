@@ -121,5 +121,5 @@ val combinedData = combineLatest(liveData1, liveData2) { live1, live2 ->
   "${live1} and ${live2}"
 }
 liveData1.value = "test"
-liveData2.value = true // combinedData is the "test and true".
+liveData2.value = true // combinedData emits "test and true".
 ```
