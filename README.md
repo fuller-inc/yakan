@@ -77,6 +77,15 @@ int.toStringWithSeparator(locale = Locale.JAPAN)
 ### Long
 same as `Int`.
 
+### View
+`View.setOnSingleClickListener` set view a click listener that ignores "double click" event.
+
+```kotlin
+button.setOnSingleClickListener {
+  // some events
+}
+```
+
 ### LiveData
 `EventLiveData<T>` is a subtype of `MutableLiveData` that do not hold a value after emitting a value.
 
@@ -91,21 +100,21 @@ liveData.value = true // emitting once, and don't hold a value.
 liveData.filter { it == true }
 ```
 
-`merge` merge any number of LiveData that emit a value, Emit latest values.
+`merge` merge any number of `LiveData` that emit a value, Emit latest values.
 
 ```kotlin
 val mergedData = merge(liveData1, liveData2)
 liveData1.value = true // mergedData is emitted `true`.
 ```
 
-`map` converts LiveData the type parameter `T` to `R`.
+`map` converts `LiveData` the type parameter `T` to `R`.
 
 ```kotlin
 liveData.value = 123
 val convertedData = liveData.map { it.toString() } // convertedData is the "123" of String value.
 ```
 
-`combineLatest` combine some [LiveData] and returns new value.
+`combineLatest` combine some `LiveData` and returns a new value.
 
 ```kotlin
 val combinedData = combineLatest(liveData1, liveData2) { live1, live2 ->
