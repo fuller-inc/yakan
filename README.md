@@ -111,7 +111,7 @@ liveData1.value = true // mergedData emits `true`.
 
 ```kotlin
 liveData.value = 123
-val convertedData = liveData.map { it.toString() } // convertedData is the "123" of String value.
+val convertedData = liveData.map { it.toString() } // convertedData emits "123", String type.
 ```
 
 `combineLatest` combine some `LiveData` and returns a new value.
