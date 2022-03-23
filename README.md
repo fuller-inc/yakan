@@ -85,20 +85,20 @@ val liveData = EventLiveData<Boolean>()
 liveData.value = true // emitting once, and don't hold a value.
 ```
 
-`LiveData<T>.filter` filter LiveData that emits `[T]` type value by `predicate`.
+`LiveData<T>.filter` filter LiveData that emits value by predicate.
 
 ```kotlin
 liveData.filter { it == true }
 ```
 
-`merge` merge any number of LiveData that emit a value of type `[T]`, Emit latest values.
+`merge` merge any number of LiveData that emit a value, Emit latest values.
 
 ```kotlin
 val mergedData = merge(liveData1, liveData2)
 liveData1.value = true // mergedData is emitted `true`.
 ```
 
-`map` converts [LiveData] the type parameter `[T]` to `[R]`.
+`map` converts LiveData the type parameter `T` to `R`.
 
 ```kotlin
 liveData.value = 123
