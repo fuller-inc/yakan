@@ -114,7 +114,7 @@ liveData.value = 123
 val convertedData = liveData.map { it.toString() } // convertedData emits "123", String type.
 ```
 
-`combineLatest` combine some `LiveData` and returns a new value.
+`combineLatest` combines some `LiveData` and emits a new value.
 
 ```kotlin
 val combinedData = combineLatest(liveData1, liveData2) { live1, live2 ->
