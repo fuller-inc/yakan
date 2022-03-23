@@ -104,7 +104,7 @@ liveData.filter { it == true }
 
 ```kotlin
 val mergedData = merge(liveData1, liveData2)
-liveData1.value = true // mergedData is emitted `true`.
+liveData1.value = true // mergedData emits `true`.
 ```
 
 `map` converts `LiveData` the type parameter `T` to `R`.
