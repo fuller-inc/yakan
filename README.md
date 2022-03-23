@@ -17,6 +17,10 @@ then include `implementation` to your `app/build.gradle` or something.
 ```
 dependencies {
   implementation "jp.co.fuller:yakan:x.y.x"
+  // View extensions
+  implementation "jp.co.fuller:yakan.view:x.y.x"
+  // LiveData extensions
+  implementation "jp.co.fuller:yakan.livedata:x.y.x"
 }
 ```
 
@@ -72,3 +76,50 @@ int.toStringWithSeparator(locale = Locale.JAPAN)
 
 ### Long
 same as `Int`.
+
+### View
+`View.setOnSingleClickListener` set view a click listener that ignores "double click" event.
+
+```kotlin
+button.setOnSingleClickListener {
+  // some events
+}
+```
+
+### LiveData
+`EventLiveData<T>` is a subtype of `MutableLiveData` that do not hold a value after emitting a value.
+
+```kotlin
+val liveData = EventLiveData<Boolean>()
+liveData.value = true // emitting once, and don't hold a value.
+```
+
+`LiveData<T>.filter` filter LiveData that emits value by predicate.
+
+```kotlin
+liveData.filter { it == true }
+```
+
+`merge` merges any number of `LiveData` and emits latest values.
+
+```kotlin
+val mergedData = merge(liveData1, liveData2)
+liveData1.value = true // mergedData emits `true`.
+```
+
+`map` converts `LiveData` the type parameter `T` to `R`.
+
+```kotlin
+liveData.value = 123
+val convertedData = liveData.map { it.toString() } // convertedData emits "123", String type.
+```
+
+`combineLatest` combines some `LiveData` and emits a new value.
+
+```kotlin
+val combinedData = combineLatest(liveData1, liveData2) { live1, live2 ->
+  "${live1} and ${live2}"
+}
+liveData1.value = "test"
+liveData2.value = true // combinedData emits "test and true".
+```
