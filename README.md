@@ -100,7 +100,7 @@ liveData.value = true // emitting once, and don't hold a value.
 liveData.filter { it == true }
 ```
 
-`merge` merge any number of `LiveData` that emit a value, Emit latest values.
+`merge` merges any number of `LiveData` and emits latest values.
 
 ```kotlin
 val mergedData = merge(liveData1, liveData2)
