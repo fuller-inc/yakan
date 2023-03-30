@@ -1,3 +1,7 @@
+**_@deprecated_**
+
+XMLレイアウト時代に @okuzawatsさんが管理してくれていたライブラリです。Composeレイアウトになっていたり、メンテナーがいなくなっていたりで利用を推奨していません。
+
 # yakan
 a small library extending Kotlin for Android.
 
